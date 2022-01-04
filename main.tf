@@ -22,6 +22,7 @@ resource "null_resource" "kube_config_trigger" {
   # fire the trigger when the iks cluster requires re-provisioning.
   triggers = {
     iks_cluster_moid = data.intersight_kubernetes_cluster.iks.results[0].moid
+  }
 
   # execute the following 'local-exec' provisioners each time the trigger is invoked.
   # generate the iks kubeconfig file using 'cat' and heredoc.

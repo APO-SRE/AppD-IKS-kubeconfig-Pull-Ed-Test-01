@@ -17,5 +17,5 @@ variable "intersight_endpoint" {
 
 variable "iks_cluster_name" {
   description = "Name of the IKS Cluster."
-  type = string
+  type        = string
 }
