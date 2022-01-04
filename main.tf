@@ -14,7 +14,7 @@ provider "kubernetes" {
 
 # Data Sources -------------------------------------------------------------------------------------
 data "intersight_kubernetes_cluster" "iks" {
-  name = var.cluster_name
+  name = var.iks_cluster_name
 }
 
 # Resources ----------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ resource "null_resource" "kube_config_trigger" {
   provisioner "local-exec" {
     working_dir = "."
     command     = <<EOD
-cat <<EOF > "${var.cluster_name}.yaml"
+cat <<EOF > "${var.iks_cluster_name}-kubeconfig.yaml"
 ${base64decode(data.intersight_kubernetes_cluster.iks.results[0].kube_config)}
 EOF
 EOD
