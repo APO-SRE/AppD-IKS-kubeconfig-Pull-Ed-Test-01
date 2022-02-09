@@ -1,21 +1,21 @@
 # Variables ----------------------------------------------------------------------------------------
-variable "intersight_apikey" {
+variable "apikey" {
   description = "Intersight API Key."
   type        = string
 }
 
-variable "intersight_secretkey" {
+variable "secretkey" {
   description = "Intersight Secret Key or file location."
   type        = string
 }
 
-variable "intersight_endpoint" {
+variable "endpoint" {
   description = "Intersight API Endpoint URL."
   type        = string
   default     = "https://www.intersight.com"
 }
 
-variable "iks_cluster_name" {
+variable "cluster_name" {
   description = "Name of the IKS Cluster."
   type        = string
 }

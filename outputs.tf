@@ -1,7 +1,7 @@
 # Outputs ------------------------------------------------------------------------------------------
-output "iks_cluster_name" {
+output "cluster_name" {
   description = "Name of the IKS Cluster."
-  value       = var.iks_cluster_name
+  value       = var.cluster_name
 }
 
 output "iks_cluster_moid" {
